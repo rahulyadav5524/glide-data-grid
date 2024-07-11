@@ -18,16 +18,16 @@ fi
 
 update ".version = $VERSION" package.json
 
-for DIR in "cells" "source" "core"
+for DIR in "core"
 do
     pushd packages/$DIR
     update ".version = $VERSION" package.json
     popd
 done
 
-for DIR in "cells" "source"
-do
-    pushd packages/$DIR
-    update ".dependencies.\"@glideapps/glide-data-grid\" = $VERSION" package.json
-    popd
-done
+# for DIR in "cells" "source"
+# do
+#     pushd packages/$DIR
+#     update ".dependencies.\"@glideapps/glide-data-grid\" = $VERSION" package.json
+#     popd
+# done
